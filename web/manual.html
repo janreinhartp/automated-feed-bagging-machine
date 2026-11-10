@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual — Feed bagging</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body data-page="manual">
+  <header class="top">
+    <div class="brand">Feed bagging</div>
+    <nav>
+      <a href="/">Overview</a>
+      <a href="/settings.html">Settings</a>
+      <a href="/calibration.html">Calibration</a>
+      <a class="active" href="/manual.html">Manual</a>
+      <a href="/diagnostics.html">Diagnostics</a>
+    </nav>
+  </header>
+  <main>
+    <div class="banner">Manual motion is not available. The web panel cannot bypass the safety relay, and it cannot switch the feeder or either gate.</div>
+    <p class="note">The physical start, stop, and mode inputs are not trusted until the N4D8B08 manual and the sensor polarity are verified. The button below only demonstrates that a cycle request is rejected.</p>
+    <form id="login" class="row">
+      <label>Web password<input id="web-password" type="password" autocomplete="current-password"></label>
+      <button type="submit">Use for this tab</button>
+    </form>
+    <p><button id="start" type="button">Request cycle</button></p>
+    <p id="result" class="note"></p>
+    <p id="state" hidden></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diagnostics — Feed bagging</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body data-page="diagnostics">
+  <header class="top">
+    <div class="brand">Feed bagging</div>
+    <nav>
+      <a href="/">Overview</a>
+      <a href="/settings.html">Settings</a>
+      <a href="/calibration.html">Calibration</a>
+      <a href="/manual.html">Manual</a>
+      <a class="active" href="/diagnostics.html">Diagnostics</a>
+    </nav>
+  </header>
+  <main>
+    <p class="note">Times are milliseconds since boot. There is no battery-backed clock. This history is kept in RAM and is lost on reset.</p>
+    <p id="state" hidden></p>
+    <pre id="events" class="list">Waiting for the controller.</pre>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

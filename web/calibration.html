@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calibration — Feed bagging</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body data-page="calibration">
+  <header class="top">
+    <div class="brand">Feed bagging</div>
+    <nav>
+      <a href="/">Overview</a>
+      <a href="/settings.html">Settings</a>
+      <a class="active" href="/calibration.html">Calibration</a>
+      <a href="/manual.html">Manual</a>
+      <a href="/diagnostics.html">Diagnostics</a>
+    </nav>
+  </header>
+  <main>
+    <p class="note">Pulse drafts stay inside 500–2500 µs and are not treated as a measured mechanical travel. This page cannot set the calibrated flag, and the firmware will not move either servo.</p>
+    <form id="login" class="row">
+      <label>Web password<input id="web-password" type="password" autocomplete="current-password"></label>
+      <button type="submit">Use for this tab</button>
+    </form>
+    <form id="calibration-form">
+      <h2>Feeder gate</h2>
+      <div class="grid">
+        <label>Closed pulse (µs)<input id="feeder_closed_pulse_us" type="number"></label>
+        <label>Open pulse (µs)<input id="feeder_open_pulse_us" type="number"></label>
+        <label>Minimum safe pulse (µs)<input id="feeder_min_safe_pulse_us" type="number"></label>
+        <label>Maximum safe pulse (µs)<input id="feeder_max_safe_pulse_us" type="number"></label>
+      </div>
+      <h2>Discharge gate</h2>
+      <div class="grid">
+        <label>Closed pulse (µs)<input id="discharge_closed_pulse_us" type="number"></label>
+        <label>Open pulse (µs)<input id="discharge_open_pulse_us" type="number"></label>
+        <label>Minimum safe pulse (µs)<input id="discharge_min_safe_pulse_us" type="number"></label>
+        <label>Maximum safe pulse (µs)<input id="discharge_max_safe_pulse_us" type="number"></label>
+      </div>
+      <h2>Weighing draft</h2>
+      <div class="grid">
+        <label>Zero offset counts<input id="zero_offset_counts" type="number"></label>
+        <label>Span counts<input id="span_counts" type="number"></label>
+        <label>Span grams<input id="span_grams" type="number"></label>
+      </div>
+      <button type="submit">Save draft</button>
+    </form>
+    <p id="result" class="note"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

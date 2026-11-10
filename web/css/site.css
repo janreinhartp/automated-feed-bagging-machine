@@ -1,0 +1,103 @@
+:root {
+  color-scheme: dark;
+  --bg: #121417;
+  --card: #1c2128;
+  --line: #313844;
+  --text: #e7ecf1;
+  --muted: #a8b0bb;
+  --amber: #e0b15a;
+  --red: #e06a6a;
+  --green: #6dbf93;
+  --blue: #8eb6e0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  background: #181c22;
+}
+
+.brand { font-weight: 650; letter-spacing: 0.01em; }
+
+nav { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+}
+
+nav a.active, nav a:hover { color: var(--text); background: #2a313b; }
+
+main { max-width: 920px; margin: 0 auto; padding: 1.2rem; }
+
+.banner {
+  background: #3a2e16;
+  color: #f3ddb0;
+  border: 1px solid #6d5424;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; }
+
+.card, form, .list {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+
+.label { color: var(--muted); font-size: 0.85rem; }
+
+.value { font-size: 1.35rem; margin-top: 0.2rem; }
+
+.state { font-size: 2rem; font-weight: 650; }
+
+.ok { color: var(--green); }
+.warn { color: var(--amber); }
+.bad { color: var(--red); }
+
+form { display: grid; gap: 0.7rem; margin-top: 1rem; }
+
+label { display: grid; gap: 0.25rem; color: var(--muted); font-size: 0.92rem; }
+
+input, button {
+  font: inherit;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #12161c;
+  color: var(--text);
+  padding: 0.5rem 0.65rem;
+}
+
+button { background: #2c3848; cursor: pointer; }
+
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.row { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: end; }
+
+.note { color: var(--muted); }
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: Consolas, monospace;
+  font-size: 0.86rem;
+}

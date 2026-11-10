@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview — Feed bagging</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body data-page="overview">
+  <header class="top">
+    <div class="brand">Feed bagging</div>
+    <nav>
+      <a class="active" href="/">Overview</a>
+      <a href="/settings.html">Settings</a>
+      <a href="/calibration.html">Calibration</a>
+      <a href="/manual.html">Manual</a>
+      <a href="/diagnostics.html">Diagnostics</a>
+    </nav>
+  </header>
+  <main>
+    <div id="banner" class="banner">Motion is inhibited until hardware commissioning.</div>
+    <section class="grid">
+      <article class="card"><div class="label">State</div><div id="state" class="state">—</div></article>
+      <article class="card"><div class="label">Weight</div><div id="weight" class="value">unavailable</div></article>
+      <article class="card"><div class="label">Motion</div><div id="motion" class="value warn">inhibited</div></article>
+      <article class="card"><div class="label">Since boot</div><div id="uptime" class="value">—</div></article>
+    </section>
+    <p id="reason" class="note"></p>
+    <p id="protocols" class="note"></p>
+    <p id="buses" class="note"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
